@@ -7,16 +7,19 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
     - name: Deploy to GCP
       uses: appleboy/ssh-action@v1.0.3
       with:
-        host: ${{ secrets.GCP_HOST }}
-        username: ${{ secrets.GCP_USERNAME }}
-        key: ${{ secrets.GCP_SSH_KEY }}
-        passphrase: ${{ secrets.GCP_PASSPHRASE }}
+        host: ${{ secrets.GCP_HOST }}         # e.g., 34.31.143.138
+        username: ${{ secrets.GCP_USERNAME }} # e.g., tve23cs131
+        key: ${{ secrets.GCP_SSH_KEY }}       # The private key (gcp_key) content
+        passphrase: ${{ secrets.GCP_PASSPHRASE }} # If you set a passphrase, else leave empty
         script: |
           cd /home/${{ secrets.GCP_USERNAME }}/stack-it-trial
           git pull origin main
-          # docker compose up --build -d
+          docker compose up --build -d
