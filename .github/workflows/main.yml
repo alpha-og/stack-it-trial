@@ -22,4 +22,4 @@ jobs:
         script: |
           cd /home/${{ secrets.GCP_USERNAME }}/stack-it-trial
           git pull origin main
-          docker compose up --build -d
+          pnpm docker:prod -d
