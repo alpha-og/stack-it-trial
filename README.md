@@ -1,6 +1,6 @@
 # Hackathon TS Monorepo Template
 
-This is a monorepo template for a TypeScript-based web application. It includes a client-side NextJS application and a server-side NestJS application, with PostgreSQL database through sequelize .
+This is a monorepo template for a TypeScript-based web application. It includes a client-side NextJS application and a server-side NestJS application, with PostgreSQL database through sequelize
 
 ## Getting Started
 
