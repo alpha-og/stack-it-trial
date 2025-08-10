@@ -19,7 +19,7 @@ This is a monorepo template for a TypeScript-based web application. It includes 
 2. Run `pnpm install` from the root directory to install dependencies
 3. Run `pnpm dev` to start the development server (client and server); alternatively, you may start the development server individually using `pnpm dev:web` and `pnpm dev:server`
 
-This will start the NextJS development server on port 3000 by default, and the NestJS server on port 4000 by default.
+This will start the NextJS development server on port 3000 by default, and the NestJS server on port 4000 by default
 
 #### Dockerized Development
 
